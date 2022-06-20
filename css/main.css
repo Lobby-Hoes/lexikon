@@ -1,1 +1,29 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+
+body {
+    height: 100%;
+    width: auto;
+}
+
+.navbar-brand-div {
+    height: auto;
+    width: 60%;
+}
+
+.navbar-icon {
+    height: 100%;
+    width: auto;
+
+}
+
+.navbar-background {
+    background-color: rgb(255, 208, 8);
+}
+
+.button-hover {
+    transition: 0.3s;
+}
+
+.button-hover:hover {
+    background-color: rgb(239, 243, 245)
+}
