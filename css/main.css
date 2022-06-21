@@ -3,7 +3,6 @@
 body {
     height: auto;
     width: 100%;
-    overflow: hidden;
 }
 
 .navbar-icon {
@@ -22,4 +21,16 @@ body {
     background-color: rgb(239, 243, 245)
 }
 
-.
+.search-box {
+    width: 50%;
+    margin-left: 25%;
+}
+
+.search-button {
+    background-color: rgb(255, 208, 8);
+    transition: 0.3s;
+}
+
+.search-button:hover {
+    background-color: rgb(255, 242, 191);
+}
