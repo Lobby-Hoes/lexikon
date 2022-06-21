@@ -1,8 +1,9 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
 
 body {
-    height: 100%;
-    width: auto;
+    height: auto;
+    width: 100%;
+    overflow: hidden;
 }
 
 .navbar-brand-div {
@@ -13,7 +14,6 @@ body {
 .navbar-icon {
     height: 100%;
     width: auto;
-
 }
 
 .navbar-background {
@@ -27,3 +27,5 @@ body {
 .button-hover:hover {
     background-color: rgb(239, 243, 245)
 }
+
+.
