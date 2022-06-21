@@ -6,14 +6,8 @@ body {
     overflow: hidden;
 }
 
-.navbar-brand-div {
-    height: auto;
-    width: 60%;
-}
-
 .navbar-icon {
     height: 100%;
-    width: auto;
 }
 
 .navbar-background {
