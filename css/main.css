@@ -34,3 +34,7 @@ body {
 .search-button:hover {
     background-color: rgb(255, 242, 191);
 }
+
+.large-top-margin {
+    margin-top: 10%;
+}
