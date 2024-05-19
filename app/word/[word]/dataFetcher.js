@@ -5,7 +5,7 @@ export default async function fetchData(word) {
     let data = null;
     try {
         data = await fetch('https://data.hobbylos.online/graphql', {
-            body: 'query { word { word type explanation examples closeWords } }',
+            body: JSON.stringify({ query: '{ word { word type explanation examples closeWords } }' }),
             headers: { 'Content-Type': 'application/json' },
             method: 'POST'
         });
@@ -23,6 +23,7 @@ export default async function fetchData(word) {
         // });
         // table.rows().add(insertData);
         // });
+    
     if (!data) return null;
     const json = await data.json();
     console.log(json);
