@@ -2,32 +2,57 @@
 import LoadingSpinner from '@/app/ui/loading/spinner';
 import styles from './page.module.css'
 import { useEffect, useState } from 'react';
-import fetchData from './dataFetcher';
-import { useRouter } from 'next/navigation';
+import { getClosestWords, getWordInformation } from '@/app/logic/dataFetcher';
 import Link from 'next/link';
+import WordCard from './wordCard';
 
 export default function WordPage({ params }) {
-    const router = useRouter();
     const [loading, setLoading] = useState(true);
+    const [failed, setFailed] = useState(false);
     const [data, setData] = useState(null);
 
     useEffect(() => {
         const nested = async () => {
-            const data = await fetchData(params.word);
+            const data = await getClosestWords(params.word);
             if (data == null) {
-                router.push('/wordNotFound');
+                setFailed(true);
                 return;
             }
-            setData(data);
-            setLoading(false);
+            if (data[0].distance == 0) {
+                setData(data[0].word);
+                setLoading(false);
+                return;
+            }
+            const first3 = [];
+            for (let i = 0; i <= data.length-1; i++) {
+                if (i >= 3) break;
+                first3.push(data[i]);
+            }
+            setData(first3);
+            setFailed(true);
         }
-
         nested();
     }, []);
 
-    return (
-        <>
-        {loading ? <div className='center v h'><LoadingSpinner/></div> : <div className={styles.container}>
+    return (<>
+        {loading ?
+        <div className='center v h'>
+            {failed ?
+                <div className={styles.bestResults}>
+                    <h2>Nichts Gefunden :/</h2>
+                    <h4>Hier ein paar andere Wörter</h4>
+                    <div className={styles.words}>
+                        {data.map((entry, i) => {
+                            return <WordCard key={i} word={entry.word.word} />
+                        })}
+                    </div>
+                </div>
+            :
+                <LoadingSpinner/>
+            }
+        </div>
+        :
+        <div className={styles.container}>
             <div className={styles.contentContainer}>
                 <div className={styles.content}>
                     <div className={styles.wordInformation}>
@@ -57,6 +82,5 @@ export default function WordPage({ params }) {
                 </div>
             </div>
         </div>}
-        </>
-    );
+    </>);
 }

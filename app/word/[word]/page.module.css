@@ -38,6 +38,28 @@
     margin-bottom: 4px;
 }
 
+.bestResults {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bestResults > h2 {
+    margin-bottom: 0;
+}
+
+.bestResults > h4 {
+    margin-bottom: 3.5rem;
+}
+
+.words {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 1.5rem;
+}
+
 @media (max-width: 1024px) {
     .contentContainer {
         width: 60%;
