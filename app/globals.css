@@ -4,9 +4,8 @@
 
 :root {
     --main-color: #ffd008;
-    --footer-color: #333333;
+    --font-color: #333333;
     --footer-font-color: #fff;
-    --font-color: #000;
 
     --font-color-inactive: #aaaaaa;
     --font-color-inactive-2: #cccccc;

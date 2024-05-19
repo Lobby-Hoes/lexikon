@@ -4,6 +4,21 @@
     background-color: var(--main-color);
 }
 
-.header p {
+.linkicons {
+    position: relative;
+    display: flex;
+    justify-content: right;
+    margin: 1rem;
+    gap: 1rem;
+}
+
+.title {
+    position: absolute;
+    top: 50%;
+    left: 1.5rem;
+    transform: translateY(-50%);
     margin: 0;
+    padding: 0;
+    z-index: 1;
+    color: var(--font-color);
 }
