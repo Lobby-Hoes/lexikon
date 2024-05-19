@@ -11,21 +11,18 @@ export default function SocialsPanel({ className }) {
             width={30}
             height={30}
             alt='Discord'
-            style={{ marginRight: '0.5rem' }}
         /></Link>
         <Link target='_blank' href='https://github.com/Lobby-Hoes/duden' ><Image
             src={githubSVG}
             width={30}
             height={30}
             alt='Github'
-            style={{ marginRight: '0.5rem' }}
         /></Link>
         <Link target='_blank' href='https://www.reddit.com/r/Hobbylos/' ><Image
             src={redditSVG}
             width={30}
             height={30}
             alt='Reddit'
-            style={{ marginRight: '0.5rem' }}
         /></Link>
     </div>);
 }
