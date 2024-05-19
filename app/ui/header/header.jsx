@@ -26,7 +26,7 @@ export default function Header() {
             :
                 <div className={'center v h ' + styles.headercontent}>
                     <ImprintLink/>
-                    <SocialsPanel/>
+                    <SocialsPanel className={styles.headercontentSocials}/>
                 </div>
             }
             <OpenMenuIcon className={styles.openMenu} onClick={openMenu} />

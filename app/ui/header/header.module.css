@@ -10,9 +10,15 @@
 
 .headercontent {
     display: flex;
+    flex-direction: column;
     width: 100%;
     z-index: 11;
     gap: 4rem;
+}
+
+.headercontentSocials {
+    display: flex;
+    gap: 1.75rem;
 }
 
 .header.open {
@@ -24,7 +30,7 @@
     display: flex;
     justify-content: right;
     margin: 1rem;
-    gap: 1rem;
+    gap: 1.75rem;
 }
 
 .title {
