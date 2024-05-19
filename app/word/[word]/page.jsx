@@ -14,14 +14,12 @@ export default function WordPage({ params }) {
     useEffect(() => {
         const nested = async () => {
             const data = await fetchData(params.word);
-            console.log(data);
             if (data == null) {
                 router.push('/wordNotFound');
                 return;
             }
             setData(data);
             setLoading(false);
-            console.log(data);
         }
 
         nested();
