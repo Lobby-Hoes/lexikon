@@ -1,14 +1,26 @@
 'use client'
+import { useEffect } from 'react';
 import SearchBar from '../searchbar/searchBar';
 import styles from './searchForm.module.css'
+import { useRouter } from 'next/navigation';
 
 export default function SearchForm() {
+    const router = useRouter();
+
+    useEffect(() => {
+        addEventListener('keydown', (event) => {
+            if (event.key != 'Enter') return;
+            search();
+        });
+    }, []);
+
     const search = () => {
-        const query = document.getElementById('query').value;
-        console.log(query);
+        const query = document.getElementById('query').value.trim();
+        if (query == '') return;
+        router.push('/word/' + query);
     };
     return (
-        <form className={styles.searchbox}>
+        <div className={styles.searchbox}>
             <SearchBar />
             <input
                 className={styles.searchbutton}
@@ -16,6 +28,6 @@ export default function SearchForm() {
                 value='Nachschlagen ➜'
                 onClick={search}
             />
-        </form>
+        </div>
     );
 }
