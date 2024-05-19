@@ -19,3 +19,15 @@
     padding: .75rem 1rem;
     cursor: pointer;
 }
+
+@media (max-width: 1024px) {
+    .searchbox {
+        width: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    .searchbox {
+        width: 80%;
+    }
+}

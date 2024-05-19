@@ -8,6 +8,7 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata = {
     title: 'Hobbylos Lexikon',
     description: 'Insider, Erklärungen und co. von dem erhabenden Podcast',
+    visualViewport: 'width=device-width, initial-scale=1.0'
 };
 
 export default function RootLayout({ children }) {

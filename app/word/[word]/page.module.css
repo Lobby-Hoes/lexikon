@@ -2,6 +2,7 @@
     display: inline-flex;
     justify-content: center;
     margin-top: 120px;
+    margin-bottom: 60px;
     width: 100%;
 }
 
@@ -37,6 +38,14 @@
     margin-bottom: 4px;
 }
 
-.explanation, .example, .closeWord {
-    margin-left: 1rem;
+@media (max-width: 1024px) {
+    .contentContainer {
+        width: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    .contentContainer {
+        width: 80%;
+    }
 }
