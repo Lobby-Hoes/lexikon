@@ -1,0 +1,22 @@
+.searchbar {
+    font-size: 1.5rem;
+    padding-left: 2em;
+}
+
+.searchbarholder {
+    position: relative;
+}
+
+.searchicon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+    transition: opacity .1s;
+    pointer-events: none;
+}
+
+.searchicon.away {
+    opacity: .4;
+}

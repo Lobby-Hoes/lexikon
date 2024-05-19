@@ -1,0 +1,9 @@
+.header {
+    position: fixed;
+    width: 100%;
+    background-color: var(--main-color);
+}
+
+.header p {
+    margin: 0;
+}

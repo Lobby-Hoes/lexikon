@@ -1,0 +1,72 @@
+*:not(.selectable) {
+    user-select: none;
+}
+
+:root {
+    --main-color: #ffd008;
+    --footer-color: #333333;
+    --footer-font-color: #fff;
+    --font-color: #000;
+
+    --font-color-inactive: #aaaaaa;
+    --font-color-inactive-2: #cccccc;
+    --font-color-preactive: #949494;
+    --font-color-active: #242424;
+}
+
+html, body, main {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.center {
+    display: flex;
+}
+
+.center.h {
+    width: 100%;
+    justify-content: center;
+}
+
+.center.v {
+    height: 100%;
+    align-items: center;
+}
+ 
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #575757;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #9c9c9c;
+    border-radius: 1em;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #dddddd;
+}
+
+input {
+    outline: none;
+    border: 1px var(--font-color-inactive-2) solid;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+input:hover:not(:focus) {
+    border-color: var(--font-color-preactive);
+}
+
+input:focus {
+    border-color: var(--font-color-active);
+}
+
+::placeholder {
+    color: var(--font-color-inactive);
+}
