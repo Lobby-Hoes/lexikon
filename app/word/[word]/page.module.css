@@ -1,0 +1,42 @@
+.container {
+    display: inline-flex;
+    justify-content: center;
+    margin-top: 120px;
+    width: 100%;
+}
+
+.contentContainer {
+    background-color: #fff;
+    box-shadow: 0 0 1em #00000020;
+    border-radius: 5px;
+    width: 50%;
+}
+
+.content {
+    padding: 1.5rem;
+}
+
+.wordInformation {
+    display: flex;
+    align-items: flex-end;
+    gap: .5rem;
+    margin-bottom: 21.44px;
+}
+
+.detailedInformation {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.word {
+    margin: 0;
+}
+
+.type {
+    margin-bottom: 4px;
+}
+
+.explanation, .example, .closeWord {
+    margin-left: 1rem;
+}
