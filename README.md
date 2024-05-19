@@ -9,6 +9,7 @@ npm install
 ```
 und dann
 ```bash
-npm run dev
+npm run dev      <--- Development
+npm run build    <--- Production
 ```
-ausführen!
+ausführen
