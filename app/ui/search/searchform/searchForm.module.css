@@ -6,6 +6,7 @@
     padding-bottom: 2rem;
     box-shadow: 0 .5em 1em -.125em #0a0a0a1a, 0 0 0 1px #0a0a0a05;
     border-radius: 5px;
+    width: 45%;
 }
 
 .searchbutton {
