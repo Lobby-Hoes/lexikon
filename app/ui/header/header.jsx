@@ -12,6 +12,11 @@ export default function Header() {
             <Link href='/'>
                 <h2 className={styles.title}>Hobbylos Lexikon</h2>
             </Link>
+            <div className={styles.links}>
+                <Link target='_blank' href='https://hobbylos.online/impressum'>
+                    <p>Impressum</p>
+                </Link>
+            </div>
             <div className={styles.linkicons}>
                 <Link target='_blank' href='https://discord.com/invite/xfyWpPt3Uk'><Image
                     src={discordSVG}

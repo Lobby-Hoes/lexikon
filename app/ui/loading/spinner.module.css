@@ -16,6 +16,7 @@
     height: 13.33333px;
     border-radius: 50%;
     background: currentColor;
+    color: var(--font-color);
     animation-timing-function: cubic-bezier(0, 1, 1, 0);
 }
 
