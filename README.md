@@ -1,5 +1,5 @@
-# Hobbylos Duden
-📒 Der Hobbylos Duden mit Insidern, Erklärungen und co.
+# Hobbylos Lexikon
+📒 Der Hobbylos Lexikon mit Insidern, Erklärungen und co.
 
 ## Schneller Start
 
