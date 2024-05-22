@@ -13,7 +13,7 @@ export default function WordPage({ params }) {
 
     useEffect(() => {
         const nested = async () => {
-            const data = await getClosestWords(params.word);
+            const data = await getClosestWords(decodeURIComponent(params.word));
             if (data == null) {
                 setFailed(true);
                 return;
@@ -70,14 +70,14 @@ export default function WordPage({ params }) {
                                 <span className={styles.example} key={i}>{example}<br/></span>
                             ))}
                         </p>
-                        <p>
+                        {data.closeWords.length != 0 && <p>
                             <strong>Verwandte Wörter</strong><br/>
                             {data.closeWords.map((word, i) => (
                                 <span className={styles.closeWord} key={i}><Link href={'/word/' + word}>
                                     {word}
                                 </Link><br/></span>
                             ))}
-                        </p>
+                        </p>}
                     </div>
                 </div>
             </div>
